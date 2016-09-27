@@ -26,7 +26,7 @@ sample-build:
      content: $file(pipeline.yml)
      env:
       SAMPLE_REPO: "sample-repo"
-      CF_APP_NAME: "{{deploy.parameters.app-name}}"
+      CF_APP_NAME: "{{deploy.parameters.prod-app-name}}"
       TEST_SPACE: "{{deploy.parameters.test-space}}"
       TEST_ORGANIZATION: "{{deploy.parameters.test-organization}}"
       TEST_REGION_ID: "{{deploy.parameters.test-region}}"
@@ -68,4 +68,4 @@ deploy:
     prod-region: "{{region}}"
     prod-organization: "{{organization}}"
     prod-space: prod
-    app-name: "{{sample-repo.parameters.repo_name}}"
+    prod-app-name: "{{sample-repo.parameters.repo_name}}"
